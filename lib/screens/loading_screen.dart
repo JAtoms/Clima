@@ -28,7 +28,7 @@ class _LoadingScreenState extends State<LoadingScreen> {
     }
 
     if (weatherResult != null) {
-      Navigator.push(context, MaterialPageRoute(builder: (context) {
+      Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) {
         return LocationScreen(
           locationWeather: weatherResult,
         );

@@ -26,7 +26,9 @@ class _CityScreenState extends State<CityScreen> {
               Align(
                 alignment: Alignment.topLeft,
                 child: FlatButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.pop(context);
+                  },
                   child: Padding(
                     padding: const EdgeInsets.fromLTRB(0, 18, 0, 0),
                     child: Icon(

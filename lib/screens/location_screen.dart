@@ -49,7 +49,6 @@ class _LocationScreenState extends State<LocationScreen> {
 
     if (weatherResult != null) {
       upDateUi(weatherResult);
-      print('Clicked');
     } else {
       print('Error');
     }
@@ -111,8 +110,10 @@ class _LocationScreenState extends State<LocationScreen> {
                           return CityScreen();
                         }));
 
-                        print(typedCityName);
-                        makeRequestAndUpdateUiWithCityName(typedCityName);
+                        if (typedCityName != null) {
+                          print(typedCityName);
+                          makeRequestAndUpdateUiWithCityName(typedCityName);
+                        }
                       },
                       child: Icon(
                         Icons.location_city,
